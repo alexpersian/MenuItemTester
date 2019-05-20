@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MenuItemTester" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="50d-vD-UGB" customClass="BubbleView" customModule="MenuItemTester" customModuleProvider="target">
+                                <rect key="frame" x="67" y="274" width="280" height="120"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" text="Here's an example message that you might receive from your dearest friend and you'd like to copy it or something..." translatesAutoresizingMaskIntoConstraints="NO" id="Qj8-5L-hlf" customClass="UnselectableTextView" customModule="MenuItemTester" customModuleProvider="target">
+                                        <rect key="frame" x="25" y="19" width="230" height="83"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.14845002360000001" blue="0.63429259760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="9Pd-Kr-63N"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qj8-5L-hlf" secondAttribute="bottom" constant="18" id="Oa5-U1-4y8"/>
+                                    <constraint firstAttribute="width" secondItem="50d-vD-UGB" secondAttribute="height" multiplier="7:3" id="OnF-EI-qVF"/>
+                                    <constraint firstItem="Qj8-5L-hlf" firstAttribute="top" secondItem="50d-vD-UGB" secondAttribute="top" constant="19" id="R0w-Oe-cbP"/>
+                                    <constraint firstItem="Qj8-5L-hlf" firstAttribute="leading" secondItem="50d-vD-UGB" secondAttribute="leading" constant="25" id="ojr-KF-2dT"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qj8-5L-hlf" secondAttribute="trailing" constant="25" id="z4Y-2E-yFQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfd-Ir-7fH" userLabel="Container View">
+                                <rect key="frame" x="67" y="426.5" width="280" height="53"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O82-Sc-N5d" customClass="InputTextField" customModule="MenuItemTester" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="11" width="264" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.14845002360000001" blue="0.63429259760000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="O82-Sc-N5d" secondAttribute="bottom" constant="12" id="77B-hH-48l"/>
+                                    <constraint firstAttribute="width" secondItem="Xfd-Ir-7fH" secondAttribute="height" multiplier="280:53" id="Egm-J9-tig"/>
+                                    <constraint firstAttribute="width" constant="280" id="Mc0-om-mal"/>
+                                    <constraint firstItem="O82-Sc-N5d" firstAttribute="top" secondItem="Xfd-Ir-7fH" secondAttribute="top" constant="11" id="V7S-Zk-Dxq"/>
+                                    <constraint firstAttribute="trailing" secondItem="O82-Sc-N5d" secondAttribute="trailing" constant="8" id="YAg-Ql-duD"/>
+                                    <constraint firstItem="O82-Sc-N5d" firstAttribute="leading" secondItem="Xfd-Ir-7fH" secondAttribute="leading" constant="8" id="sU4-FW-hLf"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nxS-z6-Eyy">
+                                <rect key="frame" x="188.5" y="483" width="37" height="30"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <action selector="doneButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="u67-NC-eLm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Xfd-Ir-7fH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="6jI-H0-WZe"/>
+                            <constraint firstItem="Xfd-Ir-7fH" firstAttribute="top" secondItem="50d-vD-UGB" secondAttribute="bottom" constant="32.5" id="P3u-TN-JBj"/>
+                            <constraint firstItem="50d-vD-UGB" firstAttribute="centerX" secondItem="Xfd-Ir-7fH" secondAttribute="centerX" id="PsX-P8-wdI"/>
+                            <constraint firstItem="nxS-z6-Eyy" firstAttribute="centerX" secondItem="Xfd-Ir-7fH" secondAttribute="centerX" id="hQG-hT-Wey"/>
+                            <constraint firstItem="Xfd-Ir-7fH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="nkz-Jl-fOq"/>
+                            <constraint firstItem="nxS-z6-Eyy" firstAttribute="top" secondItem="Xfd-Ir-7fH" secondAttribute="bottom" constant="3.5" id="ovj-O5-anv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bubbleView" destination="50d-vD-UGB" id="DOQ-uA-Trm"/>
+                        <outlet property="textField" destination="O82-Sc-N5d" id="yZ9-OY-ec6"/>
+                        <outlet property="textView" destination="Qj8-5L-hlf" id="KO1-2X-qMZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
